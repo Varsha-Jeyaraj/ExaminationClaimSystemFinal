@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'csc210user', 'CSC!2qwasZX', 'group12');
+$conn = mysqli_connect('localhost', 'csc210user', 'CSC210!', 'group12');
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
