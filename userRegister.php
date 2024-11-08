@@ -67,6 +67,6 @@ $statement1->close();
 $statement2->close();
 
 // Success message
-header('Location: registerform.php?success=' . urlencode('User registered successfully!'));
+header('Location: dashboardMA.php?success=' . urlencode('User registered successfully!'));
 exit;
 ?>
