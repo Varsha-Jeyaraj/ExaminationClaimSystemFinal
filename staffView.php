@@ -7,8 +7,15 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 
+$user=$_SESSION['user'];
+
 include 'config.php';
-include 'navbar-staff.php';
+
+    if ($user['usertype']== "Head")
+        include 'navbar-head.php'; 
+    else
+        include 'navbar-staff.php';
+
 
 $user = $_SESSION['user'];
 $staffName = $user['name'];
