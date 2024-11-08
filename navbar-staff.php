@@ -28,6 +28,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                         <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+                        <li><a class="dropdown-item" href="staffView.php">Payment Details</a></li>
                         <li><a class="dropdown-item" href="settings.php">General Settings</a></li>
                         <li><a class="dropdown-item" href="changePassword.php">Change Password</a></li>
                         <li><hr class="dropdown-divider"></li>
