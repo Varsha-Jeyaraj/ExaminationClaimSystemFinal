@@ -65,11 +65,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add custom styling -->
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Change Password</h2>
+<?php 
+    if ($user['usertype']== "Management Assistant")
+        include 'navbar.php'; 
+    else
+        include 'navbar-staff.php';
+?>
+    <!-- Form Container -->
+    <div class="container form-container">
+        <h2 class="text-center">Change Password</h2>
 
         <!-- Display any error messages -->
         <?php if (!empty($errors)): ?>
@@ -82,26 +103,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <!-- Password Change Form -->
         <form method="POST">
-            <div class="mb-3 col-md-4">
-                <label for="oldPassword" class="form-label">Old Password:</label>
-                <input type="password" name="oldPassword" id="oldPassword" class="form-control" required>
+            <div class="mb-3">
+                <input type="password" name="oldPassword" class="form-control" placeholder="Old Password" required>
             </div>
             
-            <div class="mb-3 col-md-4">
-                <label for="newPassword" class="form-label">New Password:</label>
-                <input type="password" name="newPassword" id="newPassword" class="form-control" required>
+            <div class="mb-3">
+                <input type="password" name="newPassword" class="form-control" placeholder="New Password" required>
             </div>
             
-            <div class="mb-3 col-md-4">
-                <label for="confirmPassword" class="form-label">Confirm New Password:</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" required>
+            <div class="mb-3">
+                <input type="password" name="confirmPassword" class="form-control" placeholder="Confirm New Password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Change Password</button>
+            <button type="submit" class="btn btn-primary w-100">Change Password</button>
         </form>
     </div>
 
-    <!-- Bootstrap JS (Optional for interactive components) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

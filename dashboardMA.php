@@ -110,7 +110,7 @@ $user = $_SESSION['user'];
         }
 
         .footer {
-            background-color: #007bff; 
+            background-color:#212529; 
             color: #fff;
             text-align: center; 
             padding: 15px 0;
@@ -250,7 +250,7 @@ $user = $_SESSION['user'];
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Add User</h5>
-                        <a href="userREgister.php" class="btn btn-custom">Add New User</a>
+                        <a href="Registerform.php" class="btn btn-custom">Add New User</a>
                     </div>
                 </div>
             </div>
