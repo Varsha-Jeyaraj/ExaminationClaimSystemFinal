@@ -99,10 +99,12 @@ $conn->close();
     </style>
 </head>
 <body>
-    <!-- Top Navigation Bar -->
-     <?php
-    include 'navbar.php';
-    ?>
+<?php 
+    if ($user['usertype']== "Management Assistant")
+        include 'navbar.php'; 
+    else
+        include 'navbar-head.php';
+?>
 
 
     <!-- Main Content Area -->
