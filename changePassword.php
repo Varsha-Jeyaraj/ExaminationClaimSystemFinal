@@ -85,6 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php 
     if ($user['usertype']== "Management Assistant")
         include 'navbar.php'; 
+    elseif($user['usertype']== "Head")
+        include 'navbar-head.php';
     else
         include 'navbar-staff.php';
 ?>
