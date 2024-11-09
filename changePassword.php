@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'config.php'; // Database configuration file
-include 'navbar-staff.php'; // Optional, includes the navigation bar
+
 
 // Redirect to login page if the user is not authenticated
 if (!isset($_SESSION['user'])) {
